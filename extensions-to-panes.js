@@ -1,7 +1,12 @@
 (function() {
-	setTimeout(function() {
-		let extensionDivs = document.getElementsByClassName('toolbar-extensions')[0];
-		let panelSwitch = document.getElementById('switch');
-		[...extensionDivs.children].reverse().map(c => c.firstChild).forEach(b => panelSwitch.insertBefore(b, panelSwitch.firstChild))
-	}, 2000)
+  setTimeout(function wait() {
+    const browser = document.getElementById('browser');
+    if (browser) {
+        const toolbarExtensions = document.querySelector('.toolbar-extensions');
+        document.querySelector('.addwebpanel-wrapper').prepend(toolbarExtensions);
+    }
+    else {
+        setTimeout(wait, 300);
+    }
+}, 300);
 })()

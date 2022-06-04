@@ -1,0 +1,33 @@
+/* Hide title bar */ 
+#header {
+    display: none;
+}
+#browser.mac .window-buttongroup {
+    display: none;
+    padding-left: 7px;
+    margin-top: 11px !important;
+}
+
+/* Popup stuff from https://www.thiscodeworks.com/vivaldi-mod-extensions-in-left-pane-and-auto-hide-address-bar-show-on-hover-or-part-1-2-css/61c7e0f1fc11fb001580d692 */
+/* position extension popup */
+.extension-popup {
+    left: 34px !important;
+    top: 15% !important;
+    box-shadow: 0px 0px 10px 2px #00000075;
+}
+ 
+/* remove top arrow from extension popup */
+.extension-popup:before, .extension-popup:after {
+    display: none !important;
+}
+
+/* list extensions toolbar icons in vertical */ 
+.toolbar-extensions {
+    flex-direction: column;
+}
+ 
+/* make extension popup visible on left pane */
+#switch {
+    contain: size;
+}
+
